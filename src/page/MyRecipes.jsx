@@ -19,7 +19,7 @@ const MyRecipes = ({recipe,recipes,setRecipes}) => {
 }).then((result) => {
   console.log(result.isConfirmed)
   if (result.isConfirmed) {
-      fetch(`http://localhost:3000/recipes/${_id}`,{
+      fetch(`https://assignment-10-server-ih66.onrender.com/recipes/${_id}`,{
         method:'DELETE'
       })
       .then(res =>res.json())

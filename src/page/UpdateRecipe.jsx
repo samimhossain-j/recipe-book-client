@@ -15,7 +15,7 @@ const UpdateRecipe = () => {
         const newRecipes = Object.fromEntries(formData.entries());
         console.log(newRecipes)
 
-        fetch(`http://localhost:3000/recipes/${_id}`, {
+        fetch(`https://assignment-10-server-ih66.onrender.com/recipes/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

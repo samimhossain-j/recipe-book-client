@@ -12,7 +12,7 @@ const AddRecipe = () => {
         const newRecipe = Object.fromEntries(formData.entries())
         console.log(newRecipe)
 
-        fetch("http://localhost:3000/recipes", {
+        fetch("https://assignment-10-server-ih66.onrender.com/recipes", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         index: true,
         loader: async () => {
-          const res = await fetch("http://localhost:3000/recipes");
+          const res = await fetch("https://assignment-10-server-ih66.onrender.com/recipes");
           const data = await res.json();
           return data
         }
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         path: 'allRecipes',
         element: <AllRecipes></AllRecipes>,
           
-        loader: () => fetch("http://localhost:3000/recipes"),
+        loader: () => fetch("https://assignment-10-server-ih66.onrender.com/recipes"),
         
       },
       {
@@ -48,12 +48,12 @@ const router = createBrowserRouter([
         element: <PrivateRoute >
           <Recipe></Recipe>
         </PrivateRoute>,
-        loader: () => fetch("http://localhost:3000/recipes"),
+        loader: () => fetch("https://assignment-10-server-ih66.onrender.com/recipes"),
 
       },
       {
         path: 'updateRecipe/:id',
-        loader: ({ params }) => fetch(`http://localhost:3000/recipes/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-ih66.onrender.com/recipes/${params.id}`),
 
         Component: UpdateRecipe,
       },
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         path: 'recipeDetails/:id',
 
         Component: RecipeDetails,
-        loader: () => fetch("http://localhost:3000/recipes"),
+        loader: () => fetch("https://assignment-10-server-ih66.onrender.com/recipes"),
 
       }
     ]
